@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 18px 0;
+}
+.text{
+    font-size: 52px;
+    background: linear-gradient(to left,#00dbde,#fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 20px;
+    color:brown;
+    font-size: 28px;
+}
+.join-btn{
+    background-color: blue;
+    padding: 15px 30px;
+    color:#fff;
+    border-radius: 20px;
+    animation-name: joinAnim;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+}
+i{
+    display: none;
+}
+
+@keyframes joinAnim{
+    100%{
+        background-color: red;
+        color:chartreuse;
+    }
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    background: linear-gradient(to left, yellow,green);
+}
+.left{
+    margin:18px 30px;
+}
+.left h2{
+    font-size: 38px;
+}
+.left h2 span{
+    color:#fff;
+    animation-name: devAnim;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    border-radius: 60px;
+}
+
+@keyframes devAnim{
+    100%{
+        letter-spacing: 10px;
+    }
+}
+
+.left p{
+    width: 600px;
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 26px;
+    color:white;
+    font-family: sans-serif;
+}
+.left button{
+    border: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+@media (max-width:640px){
+    nav ul{
+        display: none;
+    }
+    img{
+        width: 90%;
+        margin: 30px;
+    }
+    i{
+        display: block;
+        margin-right: -78px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 28px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        animation-name: menuAnim;
+        animation-duration: .9s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes menuAnim{
+        50%{
+            background: blue;
+            transform: scale(.5);
+            color:#fff;
+        }
+        100%{
+            background: red;
+        }
+    }
+    .hero{
+        flex-direction: column;
+        
+    }
+    .left p{
+        width: 410px;
+    }
+    .join-btn{
+        margin: 40px;
+    }
+}
